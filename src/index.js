@@ -203,12 +203,14 @@ export default class List {
    * @returns {Array}
    */
   renderSettings() {
-    return this.settings.map(item => ({
+    const a = this.settings.map(item => ({
       ...item,
       isActive: this._data.style === item.name,
       closeOnActivate: true,
       onActivate: () => this.toggleTune(item.name)
     }))
+    console.log(a)
+    return a
   }
 
   /**
